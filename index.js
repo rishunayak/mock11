@@ -3,7 +3,7 @@ require("dotenv").config()
 const express=require("express")
 const cors=require("cors")
 const connect=require("./Config/Config")
-
+const classifieds =require("./Routes/product.route")
 const user=require("./Routes/user.route")
 //routes
 
@@ -15,6 +15,7 @@ app.use(cors())
 
 app.use("/user",user)
 //route use
+app.use("/classifieds",classifieds )
 
 
 
